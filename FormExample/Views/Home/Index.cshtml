@@ -1,0 +1,37 @@
+﻿@model myfirstDTO
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+@using (Html.BeginForm())
+{
+    @Html.DisplayNameFor(x => x.Student.FirstName);
+    <br />
+    @Html.TextBoxFor(x => x.Student.FirstName);
+    <br />
+    @Html.DisplayNameFor(x => x.Student.LastName);
+    <br />
+    @Html.TextBoxFor(x => x.Student.LastName);
+    <br />
+    @Html.DisplayNameFor(x => x.Student.PhoneNumber);
+    <br />
+    @Html.TextBoxFor(x => x.Student.PhoneNumber);
+    <br />
+    @Html.DisplayNameFor(x => x.Student.Email);
+    <br />
+    @Html.TextBoxFor(x => x.Student.Email);
+    <br />
+    @Html.DisplayNameFor(x => x.Class.Grade);
+    <br />
+  <select>
+      <option name="Classes"></option>
+  </select>
+    <br />
+    <input type="submit" name="KAYDET"/>
+
+}
